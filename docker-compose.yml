@@ -1,6 +1,11 @@
 version: '3.8'
 services:
   nest-api:
+    # image:
+      # remote
+      # 438767311855.dkr.ecr.ap-northeast-1.amazonaws.com/stageee-dockerize/backend
+      # local
+      # stageee-dockerize_nest-api
     build:
       context: .
       dockerfile: Dockerfile

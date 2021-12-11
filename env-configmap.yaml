@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  DATABASE_URL: postgresql://prisma:topsecret@postgresprisma:5432/food?schema=food&sslmode=prefer
+  POSTGRES_DB: food
+  POSTGRES_PASSWORD: topsecret
+  POSTGRES_USER: prisma
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: nest-api-env
+  name: env
