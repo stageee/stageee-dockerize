@@ -1,5 +1,5 @@
 import { PrismaService } from './prisma/prisma.service';
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { Food } from '@prisma/client';
 
@@ -18,5 +18,10 @@ export class AppController {
   @Get('foods')
   getFoods(): Promise<Food[]> {
     return this.prismaService.food.findMany();
+  }
+
+  @Post('foods')
+  async postFood(@Body() food: Food) {
+    return await this.prismaService.food.create({data: food});
   }
 }

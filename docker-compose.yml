@@ -14,7 +14,7 @@ services:
       - .env
 
   postgres:
-    image: postgres:13
+    image: postgres:14
     container_name: postgresprisma
     restart: always
     ports:
