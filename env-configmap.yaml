@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  DATABASE_URL: postgresql://prisma:topsecret@stageee-db.cpebwdymleqq.ap-northeast-1.rds.amazonaws.com:5432/food?schema=food&sslmode=prefer
+  POSTGRES_DB: food
+  POSTGRES_HOST: stageee-db.cpebwdymleqq.ap-northeast-1.rds.amazonaws.com
+  POSTGRES_PASSWORD: topsecret
+  POSTGRES_USER: prisma
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: nest-api-env
+  name: env
