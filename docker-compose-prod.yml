@@ -6,15 +6,16 @@ services:
       438767311855.dkr.ecr.ap-northeast-1.amazonaws.com/stageee-dockerize/backend
       # local
       # stageee-dockerize_nest-api
-    build:
-      context: .
-      dockerfile: Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
     container_name: nest-api 
     restart: always
     ports:
       - 3000:3000
     # depends_on:
     #   - postgres
+    platform: linux/amd64
     env_file:
       - .env
 
